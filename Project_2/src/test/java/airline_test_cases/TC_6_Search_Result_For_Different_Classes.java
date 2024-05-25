@@ -1,13 +1,13 @@
 package airline_test_cases;
-
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import airline_source_page.Airline_Booking_Page;
 import airline_source_page.Airline_Sign_Up_And_Login_Page;
-
+@Listeners(Listeners_Class.class)
 public class TC_6_Search_Result_For_Different_Classes extends Launch_and_Quit
 {
-	@Test
+	@Test(retryAnalyzer=airline_test_cases.Retry_Class.class)
 	public void Search_For_Different_Classes() throws InterruptedException
 	{
 		Airline_Sign_Up_And_Login_Page a1=new Airline_Sign_Up_And_Login_Page(driver);

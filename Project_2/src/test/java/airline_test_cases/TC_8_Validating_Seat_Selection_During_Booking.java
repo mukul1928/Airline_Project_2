@@ -1,14 +1,14 @@
 package airline_test_cases;
-
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import airline_source_page.Airline_Booking_Page;
 import airline_source_page.Airline_Seat_Selection_Page_While_One_Way_Booking;
 import airline_source_page.Airline_Sign_Up_And_Login_Page;
-
+@Listeners(Listeners_Class.class)
 public class TC_8_Validating_Seat_Selection_During_Booking extends Launch_and_Quit
 {
-	@Test
+	@Test(retryAnalyzer=airline_test_cases.Retry_Class.class)
 	public void Check_Seat_Selection() throws InterruptedException
 	{
 		Airline_Sign_Up_And_Login_Page a1=new Airline_Sign_Up_And_Login_Page(driver);

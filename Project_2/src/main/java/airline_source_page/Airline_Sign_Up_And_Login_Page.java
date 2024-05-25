@@ -7,6 +7,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import dev.failsafe.internal.util.Assert;
+
 public class Airline_Sign_Up_And_Login_Page
 {
 	WebDriver driver;
@@ -74,7 +76,7 @@ public class Airline_Sign_Up_And_Login_Page
 	
 	public void enter_user_password()
 	{
-		enter_password.sendKeys("mukul1928@");;
+		enter_password.sendKeys("mukul1928@");
 	}
 	
 	public void wrongpassword()

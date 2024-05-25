@@ -37,6 +37,12 @@ public class Airline_Booking_Page
 	@FindBy(xpath="(//div[@class='fss_flex search_colm'])")
 	WebElement click_search;
 	
+	public boolean search_tf()
+	{
+		boolean b1= click_search.isDisplayed();
+		return b1;
+	}
+	
 	@FindBy(id="welcome-det-User")
 	WebElement hoverovertouser;
 	
